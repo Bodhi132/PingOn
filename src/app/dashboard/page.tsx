@@ -9,6 +9,10 @@ export const fetchCache = "force-no-store";
 export default async function DashboardPage() {
   const supabase = await createClient();
 
+  if (!supabase) {
+    redirect("/auth/login");
+  }
+
   const { data: userData } = await supabase.auth.getUser();
   const userId = userData.user?.id;
 
