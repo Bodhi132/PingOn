@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+node_modules/
+.next/
+.env
+.env.local
+
+# Ignore backend dependencies inside the subfolder
+backend/node_modules/
+backend/.env
